@@ -206,13 +206,13 @@ plt.figure()
 ax = plt.subplot2grid((3, 2), (2, 0), )
 ax.plot(t, v_1); ax.plot(t, v_2); ax.plot(t, v_3); ax.plot(t, v_4); ax.plot(t, v_5);
 ax.set_xlim([303040,303100])
-plt.xticks(range(305000), np.repeat(range(1000), 305))
+plt.xticks([303040, 303060, 303080, 303100], [0, 20, 40, 60])
 
 ax1 = plt.subplot2grid((3, 2), (2, 1), sharey  = ax)
 ax1.plot(t, v_1); ax1.plot(t, v_2); ax1.plot(t, v_3); ax1.plot(t, v_4); ax1.plot(t, v_5);
 ax1.set_xlim([304040,304100])
 plt.setp(ax1.get_yticklabels(), visible=False)
-plt.xticks(range(305000), np.repeat(range(1000), 305))
+plt.xticks([304040, 304060, 304080, 304100], [0, 20, 40, 60])
 
 ax2 = plt.subplot2grid((3, 2), (1, 0))
 ax2.plot(t, v_1); ax2.plot(t, v_2); ax2.plot(t, v_3); ax2.plot(t, v_4); ax2.plot(t, v_5); plt.ylabel('Membrane potential [mV]')
